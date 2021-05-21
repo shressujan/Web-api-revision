@@ -8,7 +8,7 @@ namespace WebApplication.Controllers
     [Route("api/[controller]")]
     public class UserController: Controller
     {
-        private readonly List<User> _users = new List<User>();
+        private readonly List<User> _users = new();
 
         public UserController()
         {
@@ -21,7 +21,7 @@ namespace WebApplication.Controllers
         }
         
         [HttpGet]
-        public ActionResult<List<User>> Get()
+        public ActionResult<List<User>> GetUsers()
         {
             return _users;
         }
